@@ -388,13 +388,14 @@
   border-radius: 10px;
 }
 .banner_caption_5 .introduction {
-  font-size: 3em;
+  font-size: 4em;
   font-weight: bold;
   margin-bottom: 40px;
-  color: #ffcc00;
+  text-decoration: underline;
+  /* color: #ffcc00; */
 }
 .banner_caption_5 .intro-text {
-  font-size: 2em;
+  font-size: 2.5em;
   line-height: 1.8;
   font-weight: bold;
   margin-bottom: 20px;
@@ -415,7 +416,11 @@
 }
 
 .bonus-list li strong {
-  margin-right: 15px;
+  margin-right: 6px;
+  font-size: 1.2em;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #ffcc00;
 }
 
