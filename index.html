@@ -608,5 +608,17 @@
         duration: 2000,
       });
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var video = document.querySelector('.video_box');
+        if (video !== null) {
+          video.play().catch(error => {
+            // Autoplay was prevented, provide a UI element for user to start playback
+            console.warn('Autoplay was prevented. Provide a play button for user interaction.');
+          });
+        }
+      });
+    </script>
+
   </body>
 </html>
