@@ -729,6 +729,7 @@
   }
   .video_section2 .background_img2 {
     width: 100%;
+    height: 50vh;
   }
   .banner_caption_5 .introduction {
     font-size: 2em;
@@ -910,15 +911,16 @@
     object-fit: cover;
   }
   .video_box7{
-    position: absolute;
-    width: 100%;
-    height: 78vh;
-    object-fit: cover;
+
+      position: absolute;
+      width: 100%;
+      height: 105vh;
+      object-fit: cover;
   }
   .video_box4 {
     position: absolute;
     width: 100%;
-    height: 47vh;
+    height: 49vh;
     object-fit: cover;
   }
   .video_box55 {
@@ -950,6 +952,7 @@
     text-align: center;
     position: relative;
     color: white;
+    /* display: none!important; */
   }
   .platform {
     margin: 10px 0px;
@@ -1003,12 +1006,33 @@
 
 }
 
-@media screen and (max-width:600) {
+.showimg{
+  display:none!important;
+  }
+
+  @media screen and (max-width: 600px) {
   .banner_caption {
     position: relative;
     width: 100%;
     height:300px!important;
     background: url(/assets/slide/slidevideo.mp4);
 }
+.hide-imgadd{
+  display: none!important;
 }
+.showimg{
+  display:block!important;
+  margin-top: 83px;
+}
+.video_box2 {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  display: none;
+}
+
+
+}
+
 
