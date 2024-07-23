@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .banner_caption {
   position: relative;
   width: 100%;
@@ -24,10 +29,10 @@
   height: 100vh;
   object-fit: cover;
 }
-.video_box7{
+.video_box7 {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 101vh;
   object-fit: cover;
 }
 .video_box4 {
@@ -105,7 +110,6 @@
 }
 
 .addimg_box img {
-
   height: auto;
   object-fit: cover;
 }
@@ -146,6 +150,36 @@
   position: relative;
   color: white;
 }
+.sect_8_bg {
+  position: relative;
+  background-image: url("./assets/slide/lastslidelogo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.banner_caption_8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner_caption_8 img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
 .sect_55_bg {
   height: 600px;
   display: flex;
@@ -189,7 +223,7 @@
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 30px;
-  text-decoration:underline;
+  text-decoration: underline;
   /* color: #ffcc00; */
 }
 
@@ -276,7 +310,9 @@
   justify-content: space-evenly;
   gap: 10px;
 }
-
+.banner_caption_4 .social_text {
+  margin-bottom: 70px;
+}
 .social-icon {
   width: 200px;
   height: 200px;
@@ -440,7 +476,7 @@
 .sect_6_bg {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 98vh;
   /* top: 30px; */
   display: flex;
   align-items: center;
@@ -459,7 +495,7 @@
   font-size: 3em;
   font-weight: bold;
   margin-bottom: 60px;
-  text-decoration:underline;
+  text-decoration: underline;
   /* color: #ffcc00; */
 }
 
@@ -527,6 +563,9 @@
   animation: heartbeat 1s infinite;
 }
 @media screen and (max-width: 600px) {
+  .sect_8_bg {
+    height: 80vh; /* Adjust height for medium-sized screens */
+  }
   .sect_4_bg {
     background-size: cover;
     background-position: center;
@@ -640,7 +679,7 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    text-decoration:underline;
+    text-decoration: underline;
   }
 
   .bonus-list {
@@ -655,7 +694,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color:#fff;
+    color: #fff;
   }
   .bonus-list .seven-doller {
     margin-left: 16px;
@@ -676,10 +715,10 @@
   .video_box2 {
     position: absolute;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     object-fit: cover;
   }
-  .video_box7{
+  .video_box7 {
     position: absolute;
     width: 100%;
     height: 78vh;
@@ -688,13 +727,13 @@
   .video_box4 {
     position: absolute;
     width: 100%;
-    height: 47vh;
+    height: 54vh;
     object-fit: cover;
   }
   .video_box55 {
     position: absolute;
     width: 100%;
-    height: 119vh;
+    height: 114vh;
     object-fit: cover;
   }
   .video_box6 {
@@ -748,7 +787,7 @@
   .banner_caption_6 .platform-title {
     font-size: 2em;
     margin-bottom: 40px;
-    text-decoration:underline;
+    text-decoration: underline;
   }
   .platform p {
     font-size: 1.5em;
@@ -778,15 +817,17 @@
     transition: transform 0.3s;
     animation: wave 2s infinite;
   }
-  
+
   .addimg_box img {
-  
     width: 30px !important;
     height: 30px !important;
     object-fit: cover;
   }
 }
 @media screen and (max-width: 400px) {
+  .sect_8_bg {
+    height: 70vh;
+  }
   .sect_4_bg {
     background-size: cover;
     background-position: center;
@@ -837,7 +878,7 @@
     background-size: cover;
     text-align: center;
     color: #f39c12;
-    height: 62vh  !important;
+    height: 62vh !important;
   }
   .sect_55_bg {
     background-size: cover;
@@ -895,38 +936,36 @@
     font-weight: 800;
     margin: 30px 0px;
     /* text-decoration:underline; */
-
   }
   .banner_caption_55 h2 {
     font-size: 2em;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    text-decoration:underline;
+    text-decoration: underline;
   }
   .video_box2 {
     position: absolute;
     width: 100%;
-    height:50vh;
+    height: 40vh;
     object-fit: cover;
   }
-  .video_box7{
-
-      position: absolute;
-      width: 100%;
-      height: 105vh;
-      object-fit: cover;
+  .video_box7 {
+    position: absolute;
+    width: 100%;
+    height: 105vh;
+    object-fit: cover;
   }
   .video_box4 {
     position: absolute;
     width: 100%;
-    height: 49vh;
+    height: 54vh;
     object-fit: cover;
   }
   .video_box55 {
     position: absolute;
     width: 100%;
-    height: 150vh;
+    height: 145vh;
     object-fit: cover;
   }
   .video_box6 {
@@ -945,7 +984,7 @@
     background: black;
     background-size: cover;
     background-position: center;
-    height:50vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -962,9 +1001,9 @@
   }
   .video-section {
     position: relative;
-    width:100%;
-    height:394px!important;
-}
+    width: 100%;
+    height: 394px !important;
+  }
   .video_section2 .background_img2 {
     width: 100%;
   }
@@ -985,7 +1024,7 @@
   .banner_caption_6 .platform-title {
     font-size: 2em;
     margin-bottom: 40px;
-    text-decoration:underline;
+    text-decoration: underline;
   }
   .platform p {
     font-size: 1.5em;
@@ -1000,39 +1039,34 @@
   .banner_caption {
     position: relative;
     width: 100%;
-    height:300px!important;
+    height: 300px !important;
     background: url(/assets/slide/slidevideo.mp4);
-}
-
-}
-
-.showimg{
-  display:none!important;
   }
+}
 
-  @media screen and (max-width: 600px) {
+.showimg {
+  display: none !important;
+}
+
+@media screen and (max-width: 600px) {
   .banner_caption {
     position: relative;
     width: 100%;
-    height:300px!important;
+    height: 300px !important;
     background: url(/assets/slide/slidevideo.mp4);
+  }
+  .hide-imgadd {
+    display: none !important;
+  }
+  .showimg {
+    display: block !important;
+    margin-top: 83px;
+  }
+  .video_box2 {
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    display: none;
+  }
 }
-.hide-imgadd{
-  display: none!important;
-}
-.showimg{
-  display:block!important;
-  margin-top: 83px;
-}
-.video_box2 {
-  position: absolute;
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
-  display: none;
-}
-
-
-}
-
-
