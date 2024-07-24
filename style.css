@@ -562,6 +562,13 @@
 .animate__heartBeat {
   animation: heartbeat 1s infinite;
 }
+/* .hide-imgadd {
+  display: none !important;
+} */
+.showimg {
+  display: none !important;
+  margin-top: 83px;
+}
 /* @media only screen
     and (device-width : 414px)
     and (device-height : 896px)
