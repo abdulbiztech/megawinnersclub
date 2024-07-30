@@ -1,14 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Kalnia+Glaze&display=swap");
 .banner_caption {
   position: relative;
   width: 100%;
   height: 600px;
 
-  background: url("./assets/slide/slidevideo.mp4");
+  background: url("/assets/slide/slidevideo1.mp4");
 }
 
 .video-section {
@@ -178,7 +174,125 @@
   max-height: 100%;
   object-fit: cover;
 }
+.sect_9_bg {
+  position: relative;
+  background-image: url("./assets/slide/lastslidelogo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffd700; /* Match the golden color from the image */
+}
 
+.video_box9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.banner_caption_9 {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 60px;
+  font-family: "Kalnia", sans-serif;
+}
+
+.banner_text_1,
+.banner_text_2 {
+  font-size: 3em;
+  margin: 5px 0;
+  color: #ffd700; /* Match the golden color */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5),
+    0 0 30px rgba(255, 215, 0, 0.3); /* Add glowing effect */
+}
+
+.banner_subtext {
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: #ffd700; /* Match the golden color */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5),
+    0 0 30px rgba(255, 215, 0, 0.3); /* Add glowing effect */
+}
+.banner_subtext span {
+  display: block;
+  margin: 15px 10px;
+}
+
+.social_icons {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.social_icons img {
+  width: 100px;
+  margin: 10px 20px;
+  height: 100px;
+}
+
+/* .sect_9_bg {
+  position: relative;
+  background-image: url("./assets/slide/lastslidelogo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.video_box9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.banner_caption_9 {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.banner_caption_9 .banner_text_1 {
+  font-size: 3em;
+  margin: 0.5em 0;
+}
+.banner_caption_9 .banner_text_2 {
+  font-size: 2.5em;
+  margin: 0.5em 0;
+}
+.banner_subtext {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+.social_icons {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+.social_icons img {
+  width: 50px;
+  height: 50px;
+} */
 .sect_55_bg {
   height: 600px;
   display: flex;
@@ -221,6 +335,7 @@
 .banner_caption_55 h2 {
   font-size: 36px;
   font-weight: bold;
+  font-family: "Kalnia", sans-serif;
   margin-bottom: 30px;
   text-decoration: underline;
 }
@@ -268,6 +383,8 @@
   font-size: 25px;
   font-weight: 800;
   margin: 30px 0px;
+  font-family: "Kalnia", sans-serif;
+  /* text-decoration:underline; */
 }
 
 .sect_4_bg {
@@ -287,6 +404,8 @@
   position: relative;
   font-size: 2.5em;
   margin-bottom: 20px;
+  /* color: #ffcc00; */
+  font-family: "Kalnia", sans-serif;
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;
 }
@@ -414,6 +533,7 @@
 .banner_caption_5 {
   padding: 20px;
   border-radius: 10px;
+  font-family: "Kalnia", sans-serif;
 }
 .banner_caption_5 .introduction {
   font-size: 4em;
@@ -478,6 +598,8 @@
   font-weight: bold;
   margin-bottom: 60px;
   text-decoration: underline;
+  font-family: "Kalnia", sans-serif;
+  /* color: #ffcc00; */
 }
 
 .platforms {
@@ -491,6 +613,7 @@
 .platform {
   text-align: center;
   flex: 1;
+  font-family: "Kalnia", sans-serif;
   margin: 10px;
 }
 
@@ -530,6 +653,11 @@
 .banner_caption_55 {
   position: relative;
 }
+.banner_caption_6 span {
+  text-align: center;
+  margin: 0px 10px;
+  text-decoration: underline;
+}
 @keyframes heartbeat {
   from {
     transform: scale(1);
@@ -549,6 +677,40 @@
 }
 
 @media screen and (max-width: 600px) {
+  .sect_9_bg {
+    height: 80vh;
+  }
+  .video_box9 {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+  .banner_text_1,
+  .banner_text_2 {
+    font-size: 2.2em;
+    margin: 8px 0;
+  }
+
+  .banner_subtext {
+    font-size: 1.8em;
+    margin: 20px 0;
+  }
+
+  .banner_subtext span {
+    margin: 10px 8px;
+  }
+
+  .social_icons {
+    gap: 0.5em;
+    margin-top: 0.7em;
+  }
+
+  .social_icons img {
+    width: 80px;
+    height: 80px;
+    margin: 7px 15px;
+  }
   .iconsJoin {
     margin-top: 40px !important;
     font-size: 1.4em !important;
@@ -703,7 +865,7 @@
     position: relative;
     width: 100%;
     height: 300px !important;
-    background: url("./assets/slide/slidevideo.mp4");
+    background: url("./assets/slide/slidevideo1.mp4");
   }
   .hide-imgadd {
     display: none !important;
@@ -787,9 +949,10 @@
     color: #fff;
   }
   .banner_caption_6 .platform-title {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 40px;
     text-decoration: underline;
+    line-height: 40px;
   }
   .platform p {
     font-size: 1.5em;
