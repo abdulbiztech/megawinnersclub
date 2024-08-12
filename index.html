@@ -101,12 +101,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Manifest file (for Progressive Web Apps) -->
     <link rel="manifest" href="./assets/logos/site.webmanifest" />
   </head>
 
   <body>
+  
+    
     <section>
       <div class="container-fluid">
         <div class="row">
@@ -138,7 +141,7 @@
                 <div class="row">
                   <div
                     class="col-12 text-center p-0"
-                    data-aos-duration="2000"
+                    data-aos-duration="1000"
                     data-aos="fade-up"
                   >
                     <div
@@ -151,7 +154,7 @@
                       />
                     </div>
                     <div class="animate__animated animate__zoomInDown showimg">
-                      <img src="./assets/bg.jpg" class="img-fluid" alt="" />
+                      <img src="./assets/slide/bg-removebg.png" class="img-fluid" alt="" />
                     </div>
                   </div>
                 </div>
@@ -589,8 +592,7 @@
             >
               <h2 class="platform-title">
                 OUR PLATFORMS ON FACEBOOK<span
-                  ><i class="fab fa-facebook-square facebook-icons"></i
-                ></span>
+                  ></span>
               </h2>
 
               <div class="row">
@@ -687,7 +689,25 @@
         </div>
       </div>
     </section>
-
+    <section class="sect_10_bg">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="banner_caption_10">
+              <h1 class="bonus_text">GET 100% BONUS ON YOUR FIRST DEPOSIT</h1>
+              <h2 class="bonus_subtext">SUBSCRIBE TO OUR EMAILS AND ENJOY A 100% BONUS ON YOUR FIRST DEPOSIT</h2>
+              <button class="signup_button">SIGN UP NOW!!!</button>
+              <div class="input_container">
+                <input type="text" placeholder="EMAIL ADDRESS" class="input_field" />
+                <input type="text" placeholder="MOBILE NUMBER" class="input_field" />
+                <button class="subscribe_button">SUBSCRIBE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <section class="sect_8_bg">
       <div class="container-fluid">
         <div class="row">
@@ -704,6 +724,14 @@
       </div>
     </section>
 
+    <div class="icon-bar" >
+        <a href="https://www.facebook.com/people/Megawinners-Club/pfbid02pxLE3ZDpTAxmc1GhBTjjoRTK4Sho9KGLTmVmx1DgHtmHpFBusLE5jdjPJdw41J23l/?mibextid=kFxxJD" class="facebook tooltiptext" ><i class="fa fa-facebook"></i></a> 
+        <a href="https://api.whatsapp.com/message/VKB4KWTKDV7ZP1?autoload=1&app_absent=0" class="whatsapp tooltiptext"><i class="fa fa-whatsapp"></i></a>
+        <div class="tooltip">Hover over me
+          <span class="tooltiptext">Tooltip text</span>
+        </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -716,17 +744,6 @@
         duration: 2000,
       });
     </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var video = document.querySelector(".video_box");
-        if (video !== null) {
-          video.play().catch((error) => {
-            console.warn(
-              "Autoplay was prevented. Provide a play button for user interaction."
-            );
-          });
-        }
-      });
-    </script>
+
   </body>
 </html>
