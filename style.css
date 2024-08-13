@@ -330,11 +330,6 @@
   border-radius: 50%;
 }
 
-
-/* .icon-bar a:hover {
-  background-color: #000;
-} */
-
 .facebook {
   background: #3B5998;
   color: white;
@@ -347,30 +342,55 @@
   color: white;
 }
 
-
-
-/* tooltip */
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
-  z-index: 1000;
 }
+
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
+  position: absolute;
+  z-index: 1000; /* Ensure it is above other content */
+  background-color: #fff !important; /* White background */
+  color: black !important; /* Black text */
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
-  /* Position the tooltip */
+  padding: 5px 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  bottom: 125%; /* Position above the element */
+  left: 50%;
+  margin-left: -60px; /* Center align the tooltip */
+}
+.tooltip .tooltiptext::after {
+  content: '';
   position: absolute;
-  z-index: 1;
+  top: 100%; /* Position it below the tooltip */
+  left: 50%; /* Center the arrow */
+  margin-left: -5px; /* Adjust the arrow to align with the tooltip */
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent; /* White arrow */
+  z-index: 2; /* Ensure it appears above other elements */
 }
-.tooltip:hover .tooltiptext {
+
+/* .tooltip:hover .tooltiptext {
   visibility: visible;
+  opacity: 1; 
+} */
+/* Custom tooltip styles */
+.tooltip-inner {
+
+  border-radius: 6px;
+  padding: 5px 10px; 
 }
+
+/* Adjust the arrow color */
+/* .tooltip-arrow {
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+} */
+
 
 .sect_55_bg {
   height: 600px;
