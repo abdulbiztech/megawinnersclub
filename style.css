@@ -7,8 +7,6 @@
   background: url("/assets/slide/slidevideo1.mp4");
 }
 
-
-
 .video-section {
   position: relative;
   width: 100%;
@@ -312,7 +310,6 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 1000 !important;
-
 }
 
 .icon-bar a {
@@ -331,14 +328,12 @@
 }
 
 .facebook {
-  background: #3B5998;
+  background: #3b5998;
   color: white;
 }
 
-
-
-.whatsapp{
-  background: #25D366;
+.whatsapp {
+  background: #25d366;
   color: white;
 }
 
@@ -362,7 +357,7 @@
   margin-left: -60px; /* Center align the tooltip */
 }
 .tooltip .tooltiptext::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%; /* Position it below the tooltip */
   left: 50%; /* Center the arrow */
@@ -379,9 +374,8 @@
 } */
 /* Custom tooltip styles */
 .tooltip-inner {
-
   border-radius: 6px;
-  padding: 5px 10px; 
+  padding: 5px 10px;
 }
 
 /* Adjust the arrow color */
@@ -390,7 +384,6 @@
   border-style: solid;
   border-color: #fff transparent transparent transparent;
 } */
-
 
 .sect_55_bg {
   height: 600px;
@@ -633,6 +626,9 @@
   padding: 20px;
   border-radius: 10px;
   font-family: "Kalnia", sans-serif;
+}
+.banner_caption_5 .bonus-list strong {
+  font-family: Georgia, "Times New Roman", Times, serif !important;
 }
 .banner_caption_5 .introduction {
   font-size: 4em;
@@ -1059,6 +1055,7 @@
     text-decoration: underline;
     color: #fff;
   }
+
   .banner_caption_5 .intro-text {
     font-size: 1.2em;
     line-height: 1.5;
