@@ -956,10 +956,10 @@
   .bonus-list li {
     font-size: 1em;
     font-weight: 600;
-    margin: 13px -10px;
+    margin: 10px 4px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     color: #fff;
   }
   .bonus-list .seven-doller {
