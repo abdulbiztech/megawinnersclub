@@ -244,6 +244,46 @@
   font-size: 1.5rem;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.subscribe_button:hover {
+  background-color: #cc00cc; /* Darker purple */
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow */
+}
+
+.subscribe_button:active {
+  transform: scale(0.95); /* Slightly shrink the button */
+  background-color: #aa00aa; /* Even darker purple */
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-left: 4px solid white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#spinner {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .video_box9 {
@@ -791,6 +831,11 @@
   .signup_button,
   .subscribe_button {
     font-size: 1.2rem;
+  }
+  .spinner {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
   }
   .sect_9_bg {
     height: 70vh;

@@ -696,16 +696,23 @@
               <button class="signup_button">SIGN UP NOW!!!</button>
               <div class="input_container">
                 <input
-                  type="text"
+                  type="email"
+                  id="email"
                   placeholder="EMAIL ADDRESS"
                   class="input_field"
+                  required
                 />
                 <input
                   type="text"
+                  id="mobile"
                   placeholder="MOBILE NUMBER"
                   class="input_field"
+                  required
                 />
-                <button class="subscribe_button">SUBSCRIBE</button>
+                <button id="subscribe_button" class="subscribe_button">
+                  <span id="button_text">SUBSCRIBE</span>
+                  <div id="spinner" class="spinner" style="display: none"></div>
+                </button>
               </div>
             </div>
           </div>
@@ -750,6 +757,72 @@
         <i class="fa fa-whatsapp"></i>
       </a>
     </div>
+    <!-- //Js part to add the form   -->
+
+    <script>
+      document
+        .getElementById("subscribe_button")
+        .addEventListener("click", function () {
+          var email = document.getElementById("email").value;
+          var mobile = document.getElementById("mobile").value;
+          var spinner = document.getElementById("spinner");
+          var buttonText = document.getElementById("button_text");
+
+          // Regular expressions for validation
+          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          var mobilePattern = /^[0-9]{10,15}$/;
+
+          // Validate email
+          if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+          }
+
+          // Validate mobile number
+          if (!mobilePattern.test(mobile)) {
+            alert("Please enter a valid mobile number (10-15 digits).");
+            return;
+          }
+
+          // Show the spinner and hide the button text
+          spinner.style.display = "inline-block";
+          buttonText.style.display = "none";
+
+          fetch(
+            "https://script.google.com/macros/s/AKfycbyxbNCNssSgXEyKh7zEsEkxcOkP5qLEk4w8r24t7pqvxVDdzGerIWWd3kuwzoO9_5Mk8Q/exec",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams({
+                email: email,
+                mobile: mobile,
+              }),
+            }
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.result === "success") {
+                alert("Subscription successful!");
+                // Clear the input fields
+                document.getElementById("email").value = "";
+                document.getElementById("mobile").value = "";
+              } else {
+                alert("Error occurred.");
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              alert("Error occurred.");
+            })
+            .finally(() => {
+              // Hide the spinner and show the button text again
+              spinner.style.display = "none";
+              buttonText.style.display = "inline";
+            });
+        });
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
