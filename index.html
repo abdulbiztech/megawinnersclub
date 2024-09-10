@@ -600,9 +600,12 @@
                       />
                       <p>WINDMILL SLOTS</p>
                       <span class="d-none d-md-block">
-                        <a href="https://www.facebook.com/people/Wind-Mill-Slots/pfbid0wNs345Gf6XZV64u3Raf3hLJfzGt2W9tQRjDLCKCMofN1g8cj6P46Jqcy4gpY9kWCl/?mibextid=ZbWKwL" target="_blank">Click icons to join us!!!!</a>
+                        <a
+                          href="https://www.facebook.com/people/Wind-Mill-Slots/pfbid0wNs345Gf6XZV64u3Raf3hLJfzGt2W9tQRjDLCKCMofN1g8cj6P46Jqcy4gpY9kWCl/?mibextid=ZbWKwL"
+                          target="_blank"
+                          >Click icons to join us!!!!</a
+                        >
                       </span>
-                      
                     </div>
                   </div>
                   <div class="col-6 col-md-4">
@@ -613,9 +616,10 @@
                       />
                       <p>SPIN WIN</p>
                       <span class="d-none d-md-block">
-                        <a href=" " target="_blank">Click icons to join us!!!!</a>
+                        <a href=" " target="_blank"
+                          >Click icons to join us!!!!</a
+                        >
                       </span>
-                      
                     </div>
                   </div>
                   <div class="col-6 col-md-4">
@@ -759,72 +763,141 @@
         <i class="fa fa-whatsapp"></i>
       </a>
     </div>
-    <!-- //Js part to add the form   -->
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="subscribeModalLabel">Subscribe for a Bonus</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="subscribeFormModal">
+          <div class="mb-3">
+            <label for="modalEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="modalEmail" placeholder="Enter your email" required />
+          </div>
+          <div class="mb-3">
+            <label for="modalMobile" class="form-label">Mobile number</label>
+            <input type="text" class="form-control" id="modalMobile" placeholder="Enter your mobile number" required />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modalSubscribeButton">
+          Subscribe
+          <span id="modalSpinner" class="spinner-border spinner-border-sm ms-2" style="display: none;"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
+
+
+    <!-- //Js part to add the form   -->
     <script>
+      setTimeout(function () {
+        var myModal = new bootstrap.Modal(
+          document.getElementById("subscribeModal")
+        );
+        myModal.show();
+      }, 2000);
+
+      // Handle the form submission within the modal
+      document
+        .getElementById("subscribeFormModal")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          handleSubscription(
+            document.getElementById("modalEmail").value,
+            document.getElementById("modalMobile").value,
+            document.getElementById("modalSpinner"),
+            document.getElementById("modalSubscribeButton"),
+            function () {
+              var myModal = bootstrap.Modal.getInstance(
+                document.getElementById("subscribeModal")
+              );
+              myModal.hide();
+            }
+          );
+        });
+
+      // Handle the form submission in the section
       document
         .getElementById("subscribe_button")
         .addEventListener("click", function () {
-          var email = document.getElementById("email").value;
-          var mobile = document.getElementById("mobile").value;
-          var spinner = document.getElementById("spinner");
-          var buttonText = document.getElementById("button_text");
-
-          // Regular expressions for validation
-          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          var mobilePattern = /^[0-9]{10,15}$/;
-
-          // Validate email
-          if (!emailPattern.test(email)) {
-            alert("Please enter a valid email address.");
-            return;
-          }
-
-          // Validate mobile number
-          if (!mobilePattern.test(mobile)) {
-            alert("Please enter a valid mobile number (10-15 digits).");
-            return;
-          }
-
-          // Show the spinner and hide the button text
-          spinner.style.display = "inline-block";
-          buttonText.style.display = "none";
-
-          fetch(
-            "https://script.google.com/macros/s/AKfycbyxbNCNssSgXEyKh7zEsEkxcOkP5qLEk4w8r24t7pqvxVDdzGerIWWd3kuwzoO9_5Mk8Q/exec",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-              },
-              body: new URLSearchParams({
-                email: email,
-                mobile: mobile,
-              }),
+          handleSubscription(
+            document.getElementById("email").value,
+            document.getElementById("mobile").value,
+            document.getElementById("spinner"),
+            document.getElementById("subscribe_button"),
+            function () {
+              // Clear the input fields
+              document.getElementById("email").value = "";
+              document.getElementById("mobile").value = "";
             }
-          )
-            .then((response) => response.json())
-            .then((data) => {
-              if (data.result === "success") {
-                alert("Subscription successful!");
-                // Clear the input fields
-                document.getElementById("email").value = "";
-                document.getElementById("mobile").value = "";
-              } else {
-                alert("Error occurred.");
-              }
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-              alert("Error occurred.");
-            })
-            .finally(() => {
-              // Hide the spinner and show the button text again
-              spinner.style.display = "none";
-              buttonText.style.display = "inline";
-            });
+          );
         });
+
+      // Function to handle subscription
+      function handleSubscription(email, mobile, spinner, button, onSuccess) {
+        // Regular expressions for validation
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var mobilePattern = /^[0-9]{10,15}$/;
+
+        // Validate email
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        // Validate mobile number
+        if (!mobilePattern.test(mobile)) {
+          alert("Please enter a valid mobile number (10-15 digits).");
+          return;
+        }
+
+        // Show the spinner and disable the button
+        spinner.style.display = "inline-block";
+        button.disabled = true;
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbyxbNCNssSgXEyKh7zEsEkxcOkP5qLEk4w8r24t7pqvxVDdzGerIWWd3kuwzoO9_5Mk8Q/exec",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: new URLSearchParams({
+              email: email,
+              mobile: mobile,
+            }),
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.result === "success") {
+              alert("Subscription successful!");
+              // Clear the input fields
+              if (onSuccess) onSuccess();
+            } else {
+              alert("Error occurred.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("Error occurred.");
+          })
+          .finally(() => {
+            // Hide the spinner and enable the button
+            spinner.style.display = "none";
+            button.disabled = false;
+          });
+      }
     </script>
+
+  
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
